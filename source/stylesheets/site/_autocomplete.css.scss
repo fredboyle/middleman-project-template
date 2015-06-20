@@ -1,0 +1,66 @@
+//
+// Autocomplete field styles
+// --------------------------------------------------
+
+// module variables & utilities
+$ac-color-bg: #fff;
+$ac-color-border: #999;
+$ac-color-selected: #f0f0f0;
+$ac-color-strong: #000;
+
+$ac-shadow: 0 1px 5px $ac-color-border;
+
+%ac-padding {
+	padding: 0.5em;
+	padding: 0.5rem;
+}
+
+//
+.autocomplete-form { position: relative; }
+
+// when showing suggestions
+input.searching {
+	border-bottom: none;
+}
+
+//
+.autocomplete-suggestions {
+	background: $ac-color-bg;
+	border: 1px solid $ac-color-border;
+	border-top: none;
+	cursor: default;
+	font-size: 75%;
+	overflow: auto;
+	-webkit-box-shadow: $ac-shadow;
+	-moz-box-shadow: $ac-shadow;
+	box-shadow: $ac-shadow;
+
+	// fix for weird width issue (Foundation?)
+	width: auto !important;
+	right: 0;
+
+	strong {
+		font-weight: bold;
+		color: $ac-color-strong;
+	}
+}
+.autocomplete-suggestion {
+	@extend %ac-padding;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.autocomplete-no-suggestion { @extend %ac-padding; }
+.autocomplete-selected { background: $ac-color-selected; }
+
+.autocomplete-group {
+	@extend %ac-padding;
+
+	strong {
+		font-weight: bold;
+		font-size: 16px;
+		color: $ac-color-strong;
+		display: block;
+		border-bottom: 1px solid $ac-color-strong;
+	}
+}
