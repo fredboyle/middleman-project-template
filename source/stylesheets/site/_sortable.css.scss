@@ -1,0 +1,41 @@
+//
+// Sortable styles
+// --------------------------------------------------
+
+$sort-width: 6em;
+$sort-height: 6em;
+$sort-spacing: 1em;
+$sort-radius: 0.5em;
+
+$sort-color-bg: #cdcdcd;
+$sort-color: #333;
+$sort-color-border: lighten($sort-color, 50%);
+
+.sortable-group {
+	overflow: hidden;
+
+	// sortable item
+	.item,
+	.sortable-placeholder {
+		float: left;
+		line-height: $sort-height;
+		margin-right: $sort-spacing;
+		margin-bottom: $sort-spacing;
+		text-align: center;
+		width: $sort-width;
+		height: $sort-height;
+
+		@include radius($sort-radius);
+	}
+
+	.item {
+		background-color: $sort-color-bg;
+		cursor: move;
+	}
+
+	.sortable-placeholder {
+		background-color: lighten($sort-color-bg, 10%);
+		border: 1px solid $sort-color-border;
+	}
+
+}

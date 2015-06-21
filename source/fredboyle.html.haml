@@ -15,3 +15,7 @@ title: Features by Fred Boyle | FellSwoop!
 	.small-12.medium-12.large-12.columns
 
 		%h3 Drag &amp; drop to re-order the items below
+
+		%section.sortable-group
+			- (1..50).to_a.shuffle.take(24).each do |i|
+				%div.item #{i}

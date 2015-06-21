@@ -9,5 +9,6 @@
 # site
 //= require ./site/_foundation_init
 //= require ./site/_autocomplete
+//= require ./site/_sortable
 # end site
 
